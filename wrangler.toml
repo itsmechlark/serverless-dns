@@ -1,4 +1,4 @@
-name = "serverless-dns"
+name = "dns-resolver-dev"
 route = ""
 type = "javascript"
 account_id = ""
@@ -26,8 +26,8 @@ CLOUD_PLATFORM = "cloudflare"
 WORKER_TIMEOUT = 10000
 CF_BLOCKLIST_DOWNLOAD_TIMEOUT = 5000
 CF_BLOCKLIST_URL = "https://cf.rethinkdns.com/blocklists/"
-CF_DNS_RESOLVER_URL = "https://cloudflare-dns.com/dns-query"
-CF_DNS_RESOLVER_URL_2 = "https://dns.google/dns-query"
+CF_DNS_RESOLVER_URL = "https://3i6a4njnk1.cloudflare-gateway.com/dns-query"
+CF_DNS_RESOLVER_URL_2 = "https://family.cloudflare-dns.com/dns-query"
 CF_LATEST_BLOCKLIST_TIMESTAMP = "1658898638118"
 CACHE_TTL = 1800
 TD_NODE_COUNT = 44605548
@@ -41,10 +41,9 @@ TD_PARTS = 2
 # github.com/cloudflare/wrangler2/issues/27
 # developers.cloudflare.com/workers/platform/environments
 [env.prod]
-name = "basic-unbound"
+name = "dns-resolver-prod"
 routes = [
-  "basic.rethinkdns.com/*",
-  "basic.bravedns.com/*",
+  "dns.privatealeeas.com/*",
 ]
 # vars are not inherited
 # workers/platform/environment-variables#environment-variables-via-wrangler
@@ -56,8 +55,8 @@ CLOUD_PLATFORM = "cloudflare"
 WORKER_TIMEOUT = 10000
 CF_BLOCKLIST_DOWNLOAD_TIMEOUT = 5000
 CF_BLOCKLIST_URL = "https://cf.rethinkdns.com/blocklists/"
-CF_DNS_RESOLVER_URL = "https://cloudflare-dns.com/dns-query"
-CF_DNS_RESOLVER_URL_2 = "https://dns.google/dns-query"
+CF_DNS_RESOLVER_URL = "https://3i6a4njnk1.cloudflare-gateway.com/dns-query"
+CF_DNS_RESOLVER_URL_2 = "https://family.cloudflare-dns.com/dns-query"
 CF_LATEST_BLOCKLIST_TIMESTAMP = "1658898638118"
 CACHE_TTL = 1800
 TD_NODE_COUNT = 44605548
